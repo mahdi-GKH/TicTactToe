@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="bg-dark overflow-hidden">
+
+    <div id="setting" class="container-fluid d-none w-100 vh-100 position-absolute ">
+        <button id="closeBTN" class="btn-close btn-close-white m-3"></button>
+        <div class="container bg-white2 rounded-5">
+            <form class=" p-5 w-100" action="">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <input type="text" name="" class="form-control" placeholder="Player 1 Name" id="p1_name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="text" name="" class="form-control" placeholder="Player 2 Name" id="p2_name">
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-12 col-md-6">
+                        <label class="form-label text-white d-block" for="p1_color">Player 1 Color:</label>
+                        <input type="color" name="" class="form-control-color w-100" id="p1_color">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label class="form-label text-white d-block" for="p2_color">Player 2 Color:</label>
+                        <input type="color" name="" class="form-control-color w-100" id="p2_color">
+                    </div>
+                </div>
+            </form>
+            
+            <div class="row position-relative w-100 justify-content-end p-5">
+                <button id="saveBTN" class="btn btn-success w-25 ">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="position-absolute top-0 end-0 d-inline-block">
+        <button class="btn btn-outline-danger my-5 w-75" id="reset_score">Reset Scores <i class="fa fa-refresh"></i></button>
+        <button class="btn btn-outline-info  w-75" id="settingBTN">Setting <i class="fa fa-cog"></i></button>
+    </div>
+    <div id="board" class="container p-5 ">
+        <div class="row text-center justify-content-center align-items-center position-relative">
+            
+            <div id="box1" class="col-4 box text-white display-1  ID1 ID2 ID3"></div>
+            <div id="box2" class="col-4 box text-white display-1  ID1  ID4"></div>
+            <div id="box3" class="col-4 box text-white display-1  ID1  ID5 ID6 "></div>
+        </div>
+        <div class="row text-center justify-content-center align-items-center position-relative">
+            
+            <div id="box4" class="col-4 box text-white display-1  ID8   ID2 "></div>
+            <div id="box5" class="col-4 box text-white display-1  ID8 ID3  ID4 ID5 "></div>
+            <div id="box6" class="col-4 box text-white display-1  ID8 ID6 "></div>
+        </div>
+        <div class="row text-center justify-content-center position-relative align-items-center">
+            
+            <div id="box7" class="col-4 box text-white display-1   ID2  ID5  ID7"></div>
+            <div id="box8" class="col-4 box text-white display-1  ID4 ID7"></div>
+            <div id="box9" class="col-4 box text-white display-1   ID3   ID6 ID7"></div>
+        </div>
+    </div>
+
+    <div id="scores" class="container-fluid position-absolute bottom-0 start-0">
+        <div class="row">
+            
+            <div id="p1" class="col-6 p-5 text-center d-flex flex-column align-items-center justify-content-center">
+                <div class="text-white fs-3" id="player1_name"></div>
+                
+                <div class="text-white fs-3" id="score_p1"></div>
+            </div>
+            <div id="p2" class="col-6 p-5 text-center d-flex flex-column align-items-center justify-content-center position-relative" >
+                
+                <div class="text-white fs-3" id="player2_name"></div>
+                
+                <div class="text-white fs-3" id="score_p2"></div>
+            </div>
+        </div>
+    </div>
+ 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
